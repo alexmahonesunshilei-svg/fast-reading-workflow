@@ -59,7 +59,7 @@ A 学术论文 · B 书籍 · C 小说 · D 散文 · E 报刊 · F 采访 · **
 
 ```bash
 # Claude Code（最完整体验）
-git clone https://github.com/sunshilei/fast-reading-workflow.git ~/Desktop/快速阅读
+git clone https://github.com/alexmahonesunshilei-svg/fast-reading-workflow.git ~/Desktop/快速阅读
 cd ~/Desktop/快速阅读/dist && bash install.sh
 open ~/Desktop/快速阅读/config.json   # 填个人信息
 
@@ -176,11 +176,11 @@ MIT.
 
 ## 🔗 Links
 
-- 📖 [QUICKSTART.md](./QUICKSTART.md) · 5 분 시작
-- 🛠️ [INSTALL.md](./INSTALL.md) · 三平台详细安装
-- 🤖 [SKILL.md](./SKILL.md) · LLM 核心指令（共用）
-- 📋 [CHANGELOG.md](./CHANGELOG.md) · 版本演进
-- ⚖️ [LICENSE](./LICENSE) · MIT
+- 📖 [QUICKSTART.md](./dist/QUICKSTART.md) · 5 분 시작
+- 🛠️ [INSTALL.md](./dist/INSTALL.md) · 三平台详细安装
+- 🤖 [SKILL.md](./dist/SKILL.md) · LLM 核心指令（共用）
+- 📋 [CHANGELOG.md](./dist/CHANGELOG.md) · 版本演进
+- ⚖️ [LICENSE](./dist/LICENSE) · MIT
 
 ---
 
