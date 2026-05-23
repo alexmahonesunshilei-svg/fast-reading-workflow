@@ -28,8 +28,7 @@ Step0_多源检索升级.md
 模板/术语词典.md                    # 私人词典
 模板/path_helper.sh                 # 含个人映射的版本
 
-# 顶层 README 和 Skills矩阵 是用户特化的版本
-README.md
+# Skills矩阵 是用户特化的版本（顶层 README 是公版项目介绍，保留上传）
 Skills集成矩阵.md
 
 # ─── macOS / 编辑器 ───
