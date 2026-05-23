@@ -1,0 +1,84 @@
+{
+  "_comment": "快速阅读工作流 · 个人配置模板。复制为 config.json 后填入真实信息。所有 ? 必须改成真实值。",
+  "_help": "三层框架（上位/本位/下位）是你的博论的分析层次，可改名。chapters 是章节列表，可加可减。",
+
+  "user": {
+    "name_zh": "?",
+    "name_en": "?",
+    "name_native": "?",
+    "email": "?",
+    "orcid": ""
+  },
+
+  "university": {
+    "name_zh": "?",
+    "name_en": "?",
+    "name_native": "?",
+    "sso_domain": "?",
+    "email_pattern": "id@example.edu",
+    "library_proxy_url": ""
+  },
+
+  "advisor": {
+    "name_zh": "?",
+    "name_native": "?",
+    "email": "",
+    "methodology_tags": ["?"]
+  },
+
+  "dissertation": {
+    "topic_zh": "?",
+    "topic_en": "?",
+    "discipline": "?",
+    "chapters": ["绪论", "理论框架", "第3章", "第4章", "第5章", "结论"],
+    "framework_tiers": ["上位", "本位", "下位"],
+    "tier_descriptions": {
+      "上位": "整体话语场 / 概念史 / 政策环境",
+      "本位": "核心论证 / 本体框架",
+      "下位": "具体案例分析"
+    },
+    "target_chars": 200000,
+    "target_pages": 200
+  },
+
+  "workflow": {
+    "version": "4.6",
+    "default_tier": "三档",
+    "default_variant": "A",
+    "library_root": "~/Desktop/快速阅读/库",
+    "dissertation_project": "",
+    "min_chapter_count": 3,
+    "min_level_count": 5,
+    "output_language": "zh-CN"
+  },
+
+  "quality_thresholds": {
+    "tier3_min_chars": 8000,
+    "tier3_max_chars": 25000,
+    "variant_g_min_chars": 1500,
+    "variant_g_max_chars": 4000,
+    "passing_score": 60
+  },
+
+  "skills_priority": {
+    "must_call": ["scholar-citation-verification"],
+    "strong_recommend": ["nature-reader", "diss-bilingual-bridge"],
+    "on_demand": ["diss-citation-integrity", "literature-review", "agentmemory-remember"]
+  },
+
+  "platform_specific": {
+    "claude": {
+      "use_mcp": true,
+      "zotero_mcp_enabled": false,
+      "agentmemory_mcp_enabled": false
+    },
+    "gpt": {
+      "use_code_interpreter": true,
+      "knowledge_base_path": ""
+    },
+    "gemini": {
+      "use_code_execution": true,
+      "google_drive_root": ""
+    }
+  }
+}

@@ -1,0 +1,54 @@
+# ─── 个人信息（绝对不上传）───
+config.json                         # 个人配置（含真实姓名/邮箱/学校）
+.env
+.envrc
+*.key
+*.pem
+
+# ─── 个人阅读成果（私有库 · 不分发）───
+库/                                 # 你的所有解读卡和已读论文
+收件箱/                              # 待入库材料
+解读卡片/                            # 历史卡归档
+清理日志/                            # 整理脚本的执行记录
+检索/                                # 检索过的源记录
+*/_论文章节索引.md                  # 用户私有的章节索引
+
+# ─── 历史 / 中间产物 ───
+工作流.md
+工作流升级_v4_说明.md
+Step0_多源检索升级.md
+*.bak
+*.tmp
+/tmp/
+
+# ─── 原始 脚本/ 和 模板/ 目录里的个人化文件 ───
+# （分发版本在 dist/scripts 和 dist/templates 里，已脱敏）
+脚本/
+模板/_legacy/
+模板/术语词典.md                    # 私人词典
+模板/path_helper.sh                 # 含个人映射的版本
+
+# 顶层 README 和 Skills矩阵 是用户特化的版本
+README.md
+Skills集成矩阵.md
+
+# ─── macOS / 编辑器 ───
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# ─── Python / Node ───
+__pycache__/
+*.pyc
+node_modules/
+package-lock.json
+
+# ─── 用户自定义的 init 后产物 ───
+快速阅读/                            # init.sh 误创建（不应该）
+
+# ─── 但要保留 ───
+!dist/                              # 分发包必须上传
+!dist/**                            # 含所有子文件
+!.gitignore                         # 元

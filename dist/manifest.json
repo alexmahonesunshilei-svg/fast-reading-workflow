@@ -1,0 +1,131 @@
+{
+  "name": "fast-reading-workflow",
+  "display_name": "学术快速阅读工作流",
+  "version": "4.6.0",
+  "description": "把任何材料（PDF/EPUB/URL/音视频/付费墙论文）走全网检索→抓取→7变体三档精读→4维真实性审查→入库全流程，产出10节结构化解读卡。",
+  "author": "sunshilei",
+  "license": "MIT",
+  "homepage": "https://github.com/sunshilei/fast-reading-workflow",
+  "released": "2026-05-23",
+
+  "platforms": {
+    "claude": {
+      "supported": true,
+      "tier": "full",
+      "features": ["bash-scripts", "mcp-zotero", "mcp-agentmemory", "audio-video-whisper"]
+    },
+    "gpt": {
+      "supported": true,
+      "tier": "standard",
+      "features": ["code-interpreter", "browser", "file-search", "custom-actions"]
+    },
+    "gemini": {
+      "supported": true,
+      "tier": "standard",
+      "features": ["code-execution", "google-search", "google-drive"]
+    }
+  },
+
+  "languages": {
+    "primary": "zh-CN",
+    "secondary": ["ko-KR", "en-US", "ja-JP"],
+    "ui": "zh-CN",
+    "output_default": "zh-CN"
+  },
+
+  "core_capabilities": [
+    "7 种材料变体（论文/书/小说/散文/报刊/采访/付费墙锁文）",
+    "10 节结构化解读卡（§10 论文挂载点必填）",
+    "4 维真实性审查（页码/引用/学者名/年份）",
+    "6 维质量打分（满分 60 · 含 mermaid 雷达图）",
+    "跨库全文搜索（按章节/优先级过滤）",
+    "章节素材自动反查表",
+    "concept-map 自动 mermaid 生成",
+    "韩文 KCI/DBpia 专链路",
+    "音视频本地转写（whisper.cpp）",
+    "批量并行解读",
+    "三语邮件模板（向作者要 PDF）",
+    "5 类自动清理（dry-run + macOS 回收站）"
+  ],
+
+  "files": {
+    "core": [
+      "SKILL.md",
+      "QUICKSTART.md",
+      "INSTALL.md",
+      "install.sh",
+      "config.template.json",
+      "manifest.json",
+      "CHANGELOG.md",
+      "LICENSE"
+    ],
+    "templates": [
+      "模板/解读卡模板套件_v4.md",
+      "模板/docx_template.js",
+      "模板/术语词典.md",
+      "模板/检索候选表模板.md",
+      "模板/path_helper.sh"
+    ],
+    "scripts": [
+      "脚本/检索主题.sh",
+      "脚本/韩文学术源.sh",
+      "脚本/查全文.sh",
+      "脚本/抓取校验.sh",
+      "脚本/生成请求邮件.sh",
+      "脚本/通用提取.sh",
+      "脚本/音视频转写.sh",
+      "脚本/pdf_截图.sh",
+      "脚本/审查解读.sh",
+      "脚本/打分.sh",
+      "脚本/章节索引.sh",
+      "脚本/生成概念图.sh",
+      "脚本/搜库.sh",
+      "脚本/整理文件夹.sh",
+      "脚本/批量解读.sh",
+      "脚本/init.sh"
+    ],
+    "agent_instruction_cards": [
+      "脚本/zotero_同步.md",
+      "脚本/agentmemory_存档.md"
+    ],
+    "platform_adapters": {
+      "claude": ["platform-claude/README.md"],
+      "gpt": ["platform-gpt/README.md", "platform-gpt/instructions.md"],
+      "gemini": ["platform-gemini/README.md", "platform-gemini/instructions.md"]
+    }
+  },
+
+  "dependencies": {
+    "required": {
+      "python": ">=3.9",
+      "node": ">=18",
+      "bash": ">=3.2"
+    },
+    "python_modules": [
+      "pypdf",
+      "ebooklib",
+      "python-docx",
+      "Pillow",
+      "trafilatura",
+      "requests",
+      "beautifulsoup4"
+    ],
+    "node_packages": ["docx@^9.0"],
+    "optional_commands": [
+      "ffmpeg (音视频)",
+      "yt-dlp (YouTube)",
+      "whisper.cpp (本地转写)"
+    ]
+  },
+
+  "workflow_stats": {
+    "total_scripts": 16,
+    "total_templates": 5,
+    "total_variants": 7,
+    "card_sections": 10,
+    "audit_dimensions": 4,
+    "quality_dimensions": 6,
+    "max_concurrent_agents": 5,
+    "supported_input_types": [".pdf", ".epub", ".docx", ".hwp", ".html", ".md", ".txt", ".mp3", ".mp4", ".m4a", ".wav", ".mov", "url"]
+  }
+}
